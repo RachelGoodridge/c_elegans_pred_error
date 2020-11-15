@@ -1,0 +1,22 @@
+name: "R Code"
+output_dir: "."
+navbar:
+  title: "R Code"
+  left:
+    - text: "Base Code"
+      href: index.html
+    - text: "Figure 2"
+      href: figure2.html
+    - text: "Figure 3"
+      href: figure3.html
+    - text: "Figure 4"
+      href: figure4.html
+    - text: "Figure 5"
+      href: figure5.html
+    - text: "Figure 6"
+      href: figure6.html
+    - text: "Figs. S3 - S14"
+      href: supp.html
+output:
+  html_document:
+    theme: flatly

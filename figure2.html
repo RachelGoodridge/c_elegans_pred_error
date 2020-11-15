@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Figure 2</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R Code</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Base Code</a>
+</li>
+<li>
+  <a href="figure2.html">Figure 2</a>
+</li>
+<li>
+  <a href="figure3.html">Figure 3</a>
+</li>
+<li>
+  <a href="figure4.html">Figure 4</a>
+</li>
+<li>
+  <a href="figure5.html">Figure 5</a>
+</li>
+<li>
+  <a href="figure6.html">Figure 6</a>
+</li>
+<li>
+  <a href="supp.html">Figs. S3 - S14</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Figure 2</h1>
+
+</div>
+
+
+<p>NOTE: Run all the code included on the “Base Code” page prior to running the following.</p>
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+# load eigenworms [Broekmans et al. 2016]
+ew = read.csv(&quot;eigenworms.csv&quot;, header=F, sep=&quot;,&quot;)
+
+# specify EDM parameters/ranges
+Es = seq(1,8,1)
+thetas = seq(0,3,0.5)
+tau = 1
+tp = 1
+lib = c(1,1000)
+pred = c(1001,2000)
+maxE = 8</code></pre>
+<div id="n2-wildtype-foraging-worms-broekmans-et-al-2016" class="section level3">
+<h3>N2 Wildtype foraging worms [Broekmans et al 2016]</h3>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+# filenames
+filenames = c(
+  &#39;1.txt&#39;,
+  &#39;2.txt&#39;,
+  &#39;3.txt&#39;,
+  &#39;4.txt&#39;,
+  &#39;5.txt&#39;,
+  &#39;6.txt&#39;,
+  &#39;7.txt&#39;,
+  &#39;8.txt&#39;,
+  &#39;9.txt&#39;,
+  &#39;10.txt&#39;,
+  &#39;11.txt&#39;,
+  &#39;12.txt&#39;
+)
+
+datasections = rbind(
+  c(10001,NA),  #worm1
+  c(10001,NA),  #worm2
+  c(8501,NA),   #worm3
+  c(10501,NA),  #worm4
+  c(10501,NA),  #worm5
+  c(10501,NA),  #worm6
+  c(10501,NA),  #worm7
+  c(10501,NA),  #worm8
+  c(11001,NA),  #worm9
+  c(11001,NA),  #worm10
+  c(11001,NA),  #worm11
+  c(11001,NA)   #worm12
+)
+
+N2out = sensitivity_main(filenames, datasections, Es, thetas, tau, tp, lib, pred, sep=&quot;&quot;, maxE)</code></pre>
+</div>
+<div id="lsj1" class="section level3">
+<h3>LSJ1</h3>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+filenames_LSJ1 = c(&#39;1 300 LS51 on food L_2010_11_26__16_25___3___13_features.csv&#39;,
+                   &#39;2 300 LS51 on food L_2011_02_17__11_36___3___3_features.csv&#39;,
+                   &#39;3 300 LS51 on food R_2010_11_26__11_47___3___5_features.csv&#39;,
+                   &#39;4 300 LS51 on food L_2011_02_17__12_48___3___7_features.csv&#39;,
+                   &#39;5 300 LS51 on food L_2010_11_26__10_38_21___7___1_features.csv&#39;,
+                   &#39;6 300 LS51 on food R_2011_02_25__10_31_11___7___1_features.csv&#39;,
+                   &#39;8 300 LSJ1 on food L_2011_03_10__10_52_16___6___1_features.csv&#39;,
+                   &#39;10 300 LSJ1 on food R_2011_03_07__11_42_35___6___3_features.csv&#39;,
+                   &#39;11 300 LSJ1 on food R_2011_04_12__12_30_20___6___5_features.csv&#39;,
+                   &#39;12 300 LSJ1on food R_2011_03_15__12_37_50___6___5_features.csv&#39;)
+
+datasections_LSJ1 = rbind(
+  c(1001,NA), #worm1
+  c(1001,NA), #worm2
+  c(1001,NA), #worm3
+  c(1001,NA), #worm4
+  c(1001,NA), #worm5
+  c(1001,NA), #worm6
+  c(1001,NA), #worm8
+  c(1001,NA), #worm10
+  c(1001,NA), #worm11
+  c(1001,NA)  #worm12
+)
+
+# test data read
+# data = read.csv(filenames_LSJ1[6], header=F, sep=&quot;,&quot;)
+# data = data[datasections_LSJ1[6,1]:datasections_LSJ1[6,2],1:5]
+
+LSJ1out = sensitivity_main(filenames_LSJ1, datasections_LSJ1, Es, thetas, tau, tp, lib, pred,
+                           sep=&quot;,&quot;, maxE)</code></pre>
+</div>
+<div id="dpy-20" class="section level3">
+<h3>dpy-20</h3>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+filenames_dpy20 = c(&#39;1 dpy-20 (e1282)IV on food L_2011_08_04__11_30_01___2___4_features.csv&#39;,
+                    &#39;2 dpy-20 (e1282)IV on food L_2011_08_19__12_00_59___6___5_features.csv&#39;,
+                    &#39;3 dpy-20 (e1282)IV on food R_2011_08_04__12_51_11___6___6_features.csv&#39;,
+                    &#39;4 dpy-20 (e1282)IV on food R_2011_08_09__12_58_43___6___8_features.csv&#39;,
+                    &#39;5 dpy-20 (e1282)IV on food R_2011_08_24__11_21_59___6___5_features.csv&#39;,
+                    &#39;6 dpy-20 (e1282)IV on food R_2011_08_25__15_40_16___6___9_features.csv&#39;,
+                    &#39;7 dpy-20 (e1282)IV on food L_2011_08_04__10_52_51___8___2_features.csv&#39;,
+                    &#39;8 dpy-20 (e1282)IV on food L_2011_08_24__12_07_53___8___7_features.csv&#39;,
+                    &#39;9 dpy-20 (e1282)IV on food L_2011_08_25__11_23_10___8___1_features.csv&#39;,
+                    &#39;10 dpy-20 (e1282)IV on food R_2011_08_09__10_54_50___8___2_features.csv&#39;,
+                    &#39;11 dpy-20 (e1282)IV on food R_2011_08_19__12_43_48___8___7_features.csv&#39;,
+                    &#39;12 dpy-20 (e1282)IV on food L_2011_08_09__10_33_28___7___1_features.csv&#39;)
+
+datasections_dpy20 = rbind(
+  c(1001,NA), #worm1
+  c(1001,NA), #worm2
+  c(1001,NA), #worm3
+  c(1001,NA), #worm4
+  c(1001,NA), #worm5
+  c(1001,NA), #worm6
+  c(1001,NA), #worm7
+  c(1001,NA), #worm8
+  c(1001,NA), #worm9
+  c(1001,NA), #worm10
+  c(1001,NA), #worm11
+  c(1001,NA)  #worm12
+)
+
+# test data read
+# data = read.csv(filenames_dpy20[1], header=F, sep=&quot;,&quot;)
+
+dpy20out = sensitivity_main(filenames_dpy20, datasections_dpy20, Es, thetas, tau, tp, lib, pred,
+                            sep=&quot;,&quot;, maxE)</code></pre>
+</div>
+<div id="octr-1" class="section level3">
+<h3>octr-1</h3>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+filenames_octr1 = c(&#39;1 tag-24 (ok371)X on food R_2010_01_22__15_03_36___2___12_features.csv&#39;,
+                    &#39;2 tag-24 (ok371)X on food L_2010_01_28__13_19_44___2___9_features.csv&#39;,
+                    &#39;3 tag-24 (ok371)X on food L_2010_01_26__11_26___3___3_features.csv&#39;,
+                    &#39;4 tag-24 (ok371)X on food R_2010_01_28__13_19___3___9_features.csv&#39;,
+                    &#39;5 tag-24 (ok371)X on food L_2010_01_22__15_02_47___1___12_features.csv&#39;,
+                    &#39;6 tag-24 (ok371)X on food R_2010_01_28__13_19_32___1___9_features.csv&#39;,
+                    &#39;7 tag-24 (ok371)X on food R_2010_01_22__15_04_07___4___12_features.csv&#39;,
+                    &#39;8 tag-24 (ok371)X on food R_2010_01_26__11_27_13___4___3_features.csv&#39;,
+                    &#39;9 tag-24 (ok371)X on food R_2010_01_28__13_20_16___4___10_features.csv&#39;,
+                    &#39;10 tag-24 (ok371)X on food L_2010_01_22__15_05_37__10_features.csv&#39;,
+                    &#39;11 tag-24 (ok371)X on food L_2010_01_28__13_21_42__1_features.csv&#39;,
+                    &#39;12 tag-24 (ok371)X on food R_2010_01_26__11_28_44__2_features.csv&#39;)
+
+datasections_octr1 = rbind(
+  c(1001,NA), #worm1
+  c(1001,NA), #worm2
+  c(1001,NA), #worm3
+  c(1001,NA), #worm4
+  c(1001,NA), #worm5
+  c(1001,NA), #worm6
+  c(1001,NA), #worm7
+  c(1001,NA), #worm8
+  c(1001,NA), #worm9
+  c(1001,NA), #worm10
+  c(1001,NA), #worm11
+  c(1001,NA)  #worm12
+)
+
+# test data read
+# data = read.csv(filenames_octr1[1], header=F, sep=&quot;,&quot;)
+
+octr1out = sensitivity_main(filenames_octr1, datasections_octr1, Es, thetas, tau, tp, lib, pred,
+                            sep=&quot;,&quot;, maxE)</code></pre>
+</div>
+<div id="unc-80" class="section level3">
+<h3>unc-80</h3>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+filenames_unc80 = c(&#39;1 unc-80 (e1069) on food L_2010_04_14__14_57_39___2___12_features.csv&#39;,
+                    &#39;2 unc-80 (e1069)V on food L_2009_12_09__16_36_22___2___15_features.csv&#39;,
+                    &#39;3 unc-80 (e1069)V on food R_2009_12_10__13_43_33___2___8_features.csv&#39;,
+                    &#39;4 unc-80 (e1069) on food L_2010_04_14__14_57___3___12_features.csv&#39;,
+                    &#39;5 unc-80 (e1069)V on food R_2009_12_09__16_36___3___15_features.csv&#39;,
+                    &#39;6 unc-80 (e1069)V on food R_2009_12_10__13_43___3___8_features.csv&#39;,
+                    &#39;7 unc-80 (1069)V on food R_2009_12_10__13_42_50___1___9_features.csv&#39;,
+                    &#39;8 unc-80 (e1069) on food L_2010_04_14__14_56_45___1___12_features.csv&#39;,
+                    &#39;9 unc-80 (e1069)V on food L_2009_12_09__16_35_38___1___15_features.csv&#39;)
+
+datasections_unc80 = rbind(
+  c(1001,NA), #worm1
+  c(1001,NA), #worm2
+  c(1001,NA), #worm3
+  c(1001,NA), #worm4
+  c(1001,NA), #worm5
+  c(1001,NA), #worm6
+  c(1001,NA), #worm7
+  c(1001,NA), #worm8
+  c(1001,NA)  #worm9
+)
+
+unc80out = sensitivity_main(filenames_unc80, datasections_unc80, Es, thetas, tau, tp, lib, pred,
+                            sep=&quot;,&quot;, maxE)</code></pre>
+</div>
+</div>
+<div id="figure-specific-functions" class="section level2">
+<h2>Figure-Specific Functions</h2>
+<div id="main-function" class="section level3">
+<h3>Main Function</h3>
+<pre class="r"><code>sensitivity_main &lt;- function(filenames, datasections, Es, thetas, tau, tp, lib, pred, sep, maxE){
+  
+  # generate placeholder for output
+  main_output = array(NA, dim=c(length(Es), length(thetas), length(filenames)))
+  
+  # loop over files
+  for (i in c(1:length(filenames))) {
+    print(filenames[i])
+    print(datasections[i,])
+    data = read.csv(filenames[i], header=F, sep=sep)
+    data = data[datasections[i,1]:dim(data)[1],1:5]
+    main_output[,,i] = run_sensitivity_loop(data, lib, pred, Es, thetas, tau, tp, maxE)
+  }
+  return(main_output)
+}</code></pre>
+</div>
+<div id="function-to-test-sensitivity-looping-over-range-of-es-and-thetas" class="section level3">
+<h3>Function to Test Sensitivity Looping over Range of Es and thetas</h3>
+<pre class="r"><code>run_sensitivity_loop &lt;- function(data, lib, pred, Es, thetas, tau, tp, maxE){
+  ###inputs###
+  #data: 5-dimensional eigenworm data
+  #lib: vector of length 2 denoting start and end rows for library within data
+  #pred: vector of length 2 denoting start and end rows for prediction within data
+  #Es: vector of E values to test
+  #thetas: vector of theta values to test
+  
+  ###returns###
+  #output: array of size length(Es) by length (thetas) containing mean of...
+  #...rms prediction error over the interval specified by pred for each of...
+  #...the values of E and theta specified by the user.
+  ###
+  
+  # setup output
+  output = array(NA, dim=c(length(Es), length(thetas)))
+  
+  # generate base embedding
+  base_embedding = make_embed_skipna(data, lib, pred, maxE, tau, tp)
+  
+  # set initial outer counter
+  i = 1
+  
+  # outer loop: E
+  for(E in Es){
+    
+    # make embedding
+    matrix = base_embedding[,1:((E+1)*5)]  # assumes 5 eigenworms
+    
+    # set initial inner counter
+    j = 1
+    
+    # inner loop: theta
+    for(theta in thetas){
+      
+      # make prediction
+      new_pred &lt;- make_pred(E, matrix, theta, lib, pred)
+      observations_total = new_pred$obs
+      predictions_total = new_pred$pred
+      
+      # calculate error
+      errors &lt;- edm_error_noangles(observations_total, predictions_total)
+      
+      # store mean error in output
+      output[i,j] = mean(errors, na.rm=TRUE)
+      
+      # update inner counter
+      j = j + 1
+    }
+    
+    # update outer counter
+    i = i + 1
+  }
+  
+  return(output)
+}</code></pre>
+</div>
+<div id="function-to-generate-valid-embeddings-without-nan-values" class="section level3">
+<h3>Function to Generate Valid Embeddings without NaN Values</h3>
+<pre class="r"><code># generate embedding that doesn&#39;t include any vectors with NA values
+make_embed_skipna &lt;- function(data, lib, pred, E, tau, tp){
+  
+  # generate a standard embedding
+  embed = make_embed(data, E, tau, tp)
+  
+  # remove all rows of the embedding that contain NA values
+  for(i in c(1:dim(embed)[2])){
+    embed = embed[!is.na(embed[,i]),]
+  }
+  
+  # generate library embedding
+  liblength = lib[2] - lib[1] + 1
+  lib_embed = embed[1:liblength,]
+  
+  # generate prediction interval embedding with no library overlap
+  predlength = pred[2] - pred[1] + 1
+  pred_embed = embed[(liblength+(E*tau)+tp+1):(liblength+(E*tau)+tp+predlength),]
+  
+  # concatenate embeddings
+  output = rbind(lib_embed, pred_embed)
+  
+  return(output)
+}</code></pre>
+</div>
+<div id="function-to-calculate-rms-error-on-eigenworm-coeffs-not-angles" class="section level3">
+<h3>Function to Calculate RMS Error on Eigenworm Coeffs (not angles)</h3>
+<pre class="r"><code># calculate error from raw eigenworm coefficients
+edm_error_noangles &lt;- function(observations_total, predictions_total){
+  errors = (rowMeans((observations_total - predictions_total)^2))^(0.5)
+  return(errors)
+}</code></pre>
+</div>
+<div id="function-to-generate-time-series-of-worm-body-angle-rms-error-looping-over-e-and-theta-sequence-note-this-uses-a-standard-continuous-embedding." class="section level3">
+<h3>Function to Generate Time Series of Worm Body Angle RMS Error Looping over E and theta Sequence (Note: This uses a standard continuous embedding.)</h3>
+<pre class="r"><code>run_sensitivity_simple &lt;- function(data, lib, pred, Eandtheta, tau, tp){
+  
+  # setup output
+  output = array(NA, dim=c(dim(Eandtheta)[1],1000))
+  
+  for(i in c(1:dim(Eandtheta)[1])){
+    
+    E = Eandtheta[i,1]
+    theta = Eandtheta[i,2]
+    
+    # make embedding
+    matrix1 &lt;- make_embed(data[lib[1]:lib[2],], E, tau, tp)
+    matrix2 &lt;- make_embed(data[pred[1]:pred[2],], E, tau, tp)
+    matrix = rbind(matrix1, matrix2)
+    
+    # make prediction
+    new_pred &lt;- make_pred(E, matrix, theta, lib, pred)
+    observations_total = new_pred$obs
+    predictions_total = new_pred$pred
+    
+    # calculate error
+    output[i,] &lt;- edm_error(pred, observations_total, ew, predictions_total)
+  }
+  
+  return(output)
+}</code></pre>
+</div>
+</div>
+<div id="plotting" class="section level2">
+<h2>Plotting</h2>
+<div id="fig.-2-plot" class="section level3">
+<h3>Fig. 2 Plot</h3>
+<pre class="r"><code># main figure 2
+m = matrix(c(1:8), nrow=2, ncol=4, byrow=TRUE)
+layout(m)
+par(mai=c(0.35,0.35,0.35,0.1), omi=c(0,0,0,0), cex=1, mgp=c(1.5,0.5,0))
+
+eplots(N2out)
+eplots(octr1out)
+eplots(unc80out)
+eplots(dpy20out)
+
+thetaplots(N2out)
+thetaplots(octr1out)
+thetaplots(unc80out)
+thetaplots(dpy20out)</code></pre>
+</div>
+<div id="fig.-s1-plot" class="section level3">
+<h3>Fig. S1 Plot</h3>
+<pre class="r"><code># figure 2 supplement 1
+m = matrix(c(1:8), nrow=2, ncol=4, byrow=TRUE)
+layout(m)
+par(mai=c(0.35,0.35,0.35,0.1), omi=c(0,0,0,0), cex=1, mgp=c(1.5,0.5,0))
+
+eplots(LSJ1out)
+thetaplots(LSJ1out)</code></pre>
+</div>
+<div id="fig.-s2-plot" class="section level3">
+<h3>Fig. S2 Plot</h3>
+<pre class="r"><code>Eandtheta = rbind(
+  c(1,0),
+  c(3,1),
+  c(5,2),
+  c(7,3)
+)
+
+# working directory
+setwd(&quot;&quot;)  # enter appropriate working directory for N2 WT foraging worms
+
+# load eigenworms [Broekmans et al. 2016]
+ew = read.csv(&quot;eigenworms.txt&quot;, header=F, sep=&quot;&quot;)  # adjust as appropriate
+
+# filenames
+filenames = c(
+  &#39;1.txt&#39;,
+  &#39;2.txt&#39;,
+  &#39;3.txt&#39;,
+  &#39;4.txt&#39;,
+  &#39;5.txt&#39;,
+  &#39;6.txt&#39;,
+  &#39;7.txt&#39;,
+  &#39;8.txt&#39;,
+  &#39;9.txt&#39;,
+  &#39;10.txt&#39;,
+  &#39;11.txt&#39;,
+  &#39;12.txt&#39;
+)
+
+datasections = rbind(
+  c(10001,12000), #worm1
+  c(10001,12000), #worm2
+  c(8501,10500),  #worm3
+  c(10501,12500), #worm4
+  c(10501,12500), #worm5
+  c(10501,12500), #worm6
+  c(10501,12500), #worm7
+  c(10501,12500), #worm8
+  c(11001,13000), #worm9
+  c(11001,13000), #worm10
+  c(11001,13000), #worm11
+  c(11001,13000)  #worm12
+)
+
+
+# calculate the errors for first 3 worms
+worm = 1
+data = read.csv(filenames[worm], header=F, sep=&quot;&quot;)
+data = data[datasections[worm,1]:datasections[worm,2],1:5]
+w1_detailsens = run_sensitivity_simple(data, lib, pred, Eandtheta, tau, tp)
+
+worm = 2
+data = read.csv(filenames[worm], header=F, sep=&quot;&quot;)
+data = data[datasections[worm,1]:datasections[worm,2],1:5]
+w2_detailsens = run_sensitivity_simple(data, lib, pred, Eandtheta, tau, tp)
+
+worm = 3
+data = read.csv(filenames[worm], header=F, sep=&quot;&quot;)
+data = data[datasections[worm,1]:datasections[worm,2],1:5]
+w3_detailsens = run_sensitivity_simple(data, lib, pred, Eandtheta, tau, tp)
+
+
+# plot supp fig
+m = matrix(c(1,2,3), nrow=3, ncol=1, byrow=TRUE)
+layout(m)
+par(mai=c(0.3,0.3,0.35,0.1), omi=c(0,0,0,0), cex=1, mgp=c(1.5,0.5,0))
+cols = c(rgb(1,0,0,0.7), &#39;orange&#39;, rgb(0,0,0.5,1))
+
+# first plot
+y = w1_detailsens[1,]
+plot(y, type=&#39;o&#39;, col=&#39;gray&#39;, pch=&#39;&#39;, lty=1, lwd=1, xlab=&#39;&#39;, ylab=&#39;&#39;)
+
+for (i in c(2:4)) {
+  y = w1_detailsens[i,]
+  lines(y, col=cols[i-1], lty=1, lwd=1)
+}
+
+# second plot
+y = w2_detailsens[1,]
+plot(y, type=&#39;o&#39;, col=&#39;gray&#39;, pch=&#39;&#39;, lty=1, lwd=1, xlab=&#39;&#39;, ylab=&#39;&#39;)
+
+for (i in c(2:4)) {
+  y = w2_detailsens[i,]
+  lines(y, col=cols[i-1], lty=1, lwd=1)
+}
+
+# third plot
+y = w3_detailsens[1,]
+plot(y, type=&#39;o&#39;, col=&#39;gray&#39;, pch=&#39;&#39;, lty=1, lwd=1, xlab=&#39;&#39;, ylab=&#39;&#39;)
+
+for (i in c(2:4)) {
+  y = w3_detailsens[i,]
+  lines(y, col=cols[i-1], lty=1, lwd=1)
+}</code></pre>
+</div>
+<div id="functions-for-plotting" class="section level3">
+<h3>Functions for Plotting</h3>
+<pre class="r"><code>eplots &lt;- function(indata) {
+  xdata = Es  # same sequence of E values used to generate the data
+  linecolor = rgb(0,0,0.7,0.5)
+  linecolor2 = rgb(0,0,0.7,1)
+  symbol = &#39;.&#39;
+  smallwidth = 0.25
+  bigwidth = 3
+  thetaindex = 5
+  
+  y = indata[,thetaindex,1]
+  plot(xdata, y, type=&#39;o&#39;, col=linecolor, pch=symbol, lty=1, lwd=smallwidth, xlab=&#39;&#39;,
+       ylab=&#39;&#39;, ylim=c(min(indata[,thetaindex,]),max(indata[,thetaindex,])))
+  
+  for (i in c(2:dim(indata)[3])) {
+    y = indata[,thetaindex,i]
+    points(xdata, y, col=linecolor, pch=symbol)
+    lines(xdata, y, col=linecolor, lty=1, lwd=smallwidth)
+  }
+  
+  y = rowMeans(indata[,thetaindex,])
+  lines(xdata, y, col=linecolor2, lty=1, lwd=bigwidth)
+}
+
+
+thetaplots &lt;- function(indata){
+  xdata = thetas  # same sequence of thetas used to generate the data
+  linecolor = rgb(0.7,0,0,0.5)
+  linecolor2 = rgb(0.7,0,0,1)
+  symbol = &#39;.&#39;
+  smallwidth = 0.25
+  bigwidth = 3
+  eindex = 5
+  
+  y = indata[eindex,,1]
+  plot(xdata, y, type=&#39;o&#39;, col=linecolor, pch=symbol, lty=1, lwd=smallwidth, xlab=&#39;&#39;,
+       ylim=c(min(indata[eindex,,]),max(indata[eindex,,])), ylab=&#39;&#39;)
+  
+  
+  for (i in c(2:dim(indata)[3])) {
+    y = indata[eindex,,i]
+    points(xdata, y, col=linecolor, pch=symbol)
+    lines(xdata, y, col=linecolor, lty=1, lwd=smallwidth)
+  }
+  
+  y = rowMeans(indata[eindex,,])
+  lines(xdata, y, col=linecolor2, lty=1, lwd=bigwidth)
+}</code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

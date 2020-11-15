@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Figure 3</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R Code</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Base Code</a>
+</li>
+<li>
+  <a href="figure2.html">Figure 2</a>
+</li>
+<li>
+  <a href="figure3.html">Figure 3</a>
+</li>
+<li>
+  <a href="figure4.html">Figure 4</a>
+</li>
+<li>
+  <a href="figure5.html">Figure 5</a>
+</li>
+<li>
+  <a href="figure6.html">Figure 6</a>
+</li>
+<li>
+  <a href="supp.html">Figs. S3 - S14</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Figure 3</h1>
+
+</div>
+
+
+<p>NOTE: Run all the code included on the “Base Code” page prior to running the following.</p>
+<div id="setting-up" class="section level3">
+<h3>Setting Up</h3>
+<p>Load eigenworms and worm data of choice.</p>
+<pre class="r"><code># working directory
+setwd(&quot;&quot;)  # enter appropriate working directory
+
+# load eigenworms [Broekmans et al. 2016]
+ew = read.csv(&quot;eigenworms.csv&quot;, header=F, sep=&quot;,&quot;) 
+
+# load coefficients from worm of choice
+data = read.csv(&quot;12 Foraging Worms/1.txt&quot;, header=F, sep=&quot;&quot;)[10001:12000,1:5]</code></pre>
+</div>
+<div id="variables" class="section level3">
+<h3>Variables</h3>
+<p>These are the optimal parameters for the data produced by Broekmans et al. 2016.</p>
+<pre class="r"><code>E = 5  # embedding dimension
+tp = 1
+theta = 2  # linearity
+tau = 1
+
+# library and prediction selection
+lib = c(1,1000)
+pred = c(1001,2000)
+
+# convert frames to seconds (i.e. indicate frames per second as fps)
+fps = 16  # foraging worms</code></pre>
+</div>
+<div id="run-functions" class="section level3">
+<h3>Run Functions</h3>
+<p>Run the functions created on the “Base Code” page.</p>
+<pre class="r"><code># run the embedding function for separate lib and pred
+matrix1 &lt;- make_embed(data[lib[1]:lib[2],], E, tau, tp)
+matrix2 &lt;- make_embed(data[pred[1]:pred[2],], E, tau, tp)
+matrix = rbind(matrix1, matrix2)
+
+# run the prediction function
+new_pred &lt;- make_pred(E, matrix, theta, lib, pred)
+observations_total = new_pred$obs
+predictions_total = new_pred$pred
+
+# run the EDM error function
+errors &lt;- edm_error(pred, observations_total, ew, predictions_total)
+
+# run the cp error function
+cp_mean &lt;- cp_error(pred, data, ew)</code></pre>
+</div>
+<div id="coefficient-plot" class="section level3">
+<h3>Coefficient Plot</h3>
+<p>Create a coefficients vs time plot with the library shown as backwards in time.</p>
+<pre class="r"><code># define &quot;ends&quot; of the figure as lengths of lib and pred
+left_end = -length(lib[1]:lib[2])
+right_end = length(pred[1]:pred[2]) - 1
+
+# pick a coefficient to plot with choice of 1, 2, 3, 4, or 5
+co_num = 1
+co = data[lib[1]:pred[2], co_num]
+
+# plot assumes that lib and pred are adjacent
+par(mai=c(0.95,0.95,0.05,0.05))
+plot(c(left_end:right_end)/fps, co, type=&quot;l&quot;, xlab=&quot;time (s)&quot;, ylab=&quot;a1&quot;, cex.lab=1.5,
+     cex.axis=1.5, xaxs=&quot;i&quot;, yaxs=&quot;i&quot;)
+rect(left_end, min(co, na.rm=TRUE), 0, max(co, na.rm=TRUE), col=&quot;grey60&quot;, border=NA)
+lines(c(left_end:right_end)/fps, co, lwd=2)
+box(col=&quot;black&quot;)</code></pre>
+<p><img src="Fig3_1.png" width="60%" /></p>
+</div>
+<div id="error-plot" class="section level3">
+<h3>Error Plot</h3>
+<p>Create an RMS error vs time plot with red dots indicating a3 &gt; 15 turns.</p>
+<pre class="r"><code># identify turns as a3 &gt; 15 points
+turns &lt;- which(abs(data[pred[1]:pred[2],3]) &gt; 15)
+
+# choose frames for the worm poses
+black_points &lt;- c(428,432,436,437,438,440,476,477,479,481,483,489)
+
+# RMS error with red points on a3 &gt; 15 turns
+par(mai=c(0.95,0.95,0.1,0.1))
+plot(c(1:length(errors))/fps, errors, type=&quot;l&quot;, xlab=&quot;time (s)&quot;, ylab=&quot;prediction error (rad)&quot;,
+     col=&quot;grey50&quot;, cex.lab=1.5, cex.axis=1.5, lwd=1.5)
+points(turns/fps, errors[turns], col=&quot;red&quot;, pch=19, cex=1.3)
+points(black_points/fps, errors[black_points], pch=19, cex=1.3)
+abline(h=cp_mean, lty=&quot;dashed&quot;)  # average cp error
+
+legend(&quot;topright&quot;, legend=c(&quot;a3 &gt; 15 turns&quot;, &quot;worm poses in C&quot;), col=c(&quot;red&quot;, &quot;black&quot;), pch=19,
+       box.lty=0, cex=1.3)
+box(col=&quot;black&quot;)</code></pre>
+<p><img src="Fig3_2.png" width="60%" /></p>
+</div>
+<div id="worm-pose-plot" class="section level3">
+<h3>Worm Pose Plot</h3>
+<p>Plot the observed and predicted positions of the worm at the frames chosen above.</p>
+<pre class="r"><code># create empty vectors for the total observations and predictions
+total_obs_x = {}
+total_obs_y = {}
+total_pred_x = {}
+total_pred_y = {}
+
+# loop through all the chosen frames
+for (worm in black_points){
+  obs_data = observations_total[worm,]
+  pred_data = predictions_total[worm,]
+  
+  # create an empty position array for the observations
+  obs_pos = array(0, dim=c(100,1))
+  for(i in c(1:5)){
+    # multiply eigenworms by coefficients
+    obs_pos = obs_pos + ew[,i]*as.numeric(obs_data[i])
+  }
+  
+  # repeat for the predictions
+  pred_pos = array(0, dim=c(100,1))
+  for(i in c(1:5)){
+    # multiply eigenworms by coefficients
+    pred_pos = pred_pos + ew[,i]*as.numeric(pred_data[i])
+  }
+  
+  # create x and y coordinates for the observations
+  obs_x = {0}
+  obs_y = {0}
+  for(i in c(2:100)){
+    # convert worm angles to xy space
+    obs_x = c(obs_x, obs_x[i-1] + cos(obs_pos[i]))
+    obs_y = c(obs_y, obs_y[i-1] + sin(obs_pos[i]))
+  }
+  
+  # repeat for the predictions
+  pred_x = {0}
+  pred_y = {0}
+  for(i in c(2:100)){
+    # convert worm angles to xy space
+    pred_x = c(pred_x, pred_x[i-1] + cos(pred_pos[i]))
+    pred_y = c(pred_y, pred_y[i-1] + sin(pred_pos[i]))
+  }
+  
+  # subtract the mean of each
+  obs_x = obs_x - mean(obs_x)
+  obs_y = obs_y - mean(obs_y)
+  pred_x = pred_x - mean(pred_x)
+  pred_y = pred_y - mean(pred_y)
+  
+  # add the observations and predictions to the total
+  total_obs_x = c(total_obs_x, obs_x)
+  total_obs_y = c(total_obs_y, obs_y)
+  total_pred_x = c(total_pred_x, pred_x)
+  total_pred_y = c(total_pred_y, pred_y)
+}
+
+# calculate the graph limits based on the total
+xmag = max(abs(total_obs_x), abs(total_pred_x))
+ymag = max(abs(total_obs_y), abs(total_pred_y))
+
+# create a counter for the graphs
+i = 1
+
+# loop through all the chosen frames
+for (worm in black_points){
+  # select the observations and predictions
+  obs_x = total_obs_x[((i*100) - 99):(i*100)]
+  obs_y = total_obs_y[((i*100) - 99):(i*100)]
+  pred_x = total_pred_x[((i*100) - 99):(i*100)]
+  pred_y = total_pred_y[((i*100) - 99):(i*100)]
+  
+  # plot the worm poses for the observed and predicted data
+  par(mai=c(0.15,0.15,0.15,0.15))
+  plot(obs_x, obs_y, type=&quot;l&quot;, xlab=&quot;&quot;, ylab=&quot;&quot;, main=paste(round(worm/fps, digits=2),&quot;sec&quot;),
+       lwd=4, axes=F, cex.main=1.5, xlim=c(-xmag,xmag), ylim=c(-ymag,ymag), asp=1)
+  lines(pred_x, pred_y, col=&quot;orange&quot;, lwd=3)
+  
+  # increase the counter
+  i = i + 1
+}</code></pre>
+<p><img src="Fig3_3.png" width="60%" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

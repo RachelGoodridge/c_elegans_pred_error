@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Base Code</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R Code</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Base Code</a>
+</li>
+<li>
+  <a href="figure2.html">Figure 2</a>
+</li>
+<li>
+  <a href="figure3.html">Figure 3</a>
+</li>
+<li>
+  <a href="figure4.html">Figure 4</a>
+</li>
+<li>
+  <a href="figure5.html">Figure 5</a>
+</li>
+<li>
+  <a href="figure6.html">Figure 6</a>
+</li>
+<li>
+  <a href="supp.html">Figs. S3 - S14</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Base Code</h1>
+
+</div>
+
+
+<p>NOTE: Run all the following code to create the functions prior to creating the figures.</p>
+<div id="packages" class="section level3">
+<h3>Packages</h3>
+<p>Install and import the package “rEDM” from the CRAN Repository. <a href="https://cran.r-project.org/package=rEDM">CRAN - Package rEDM: Empirical Dynamic Modeling (‘EDM’)</a></p>
+<pre class="r"><code># install this specific version using devtools
+require(devtools)
+install_version(&quot;rEDM&quot;, version=&quot;1.2.3&quot;, repos=&quot;http://cran.us.r-project.org&quot;)
+library(rEDM)</code></pre>
+</div>
+<div id="embedding" class="section level3">
+<h3>Embedding</h3>
+<p>Generate an embedding matrix of data based on E, tau, and tp.</p>
+<pre class="r"><code># create a function to make an embedding matrix
+make_embed &lt;- function(data, E, tau, tp){
+  
+  # data rows are observations and columns are variables
+  data = as.matrix(data)
+  
+  # calculate sizes
+  numSamples = dim(data)[1]
+  inputDim = dim(data)[2]
+  finalDim = inputDim*(E+1)
+  output = array(NA, dim=c(numSamples,finalDim))
+  
+  # insert the values to be predicted in the first &quot;inputDim&quot; columns
+  output[1:numSamples,1:inputDim] &lt;- data[1:numSamples,1:inputDim]
+  
+  for (i in c(0:(E-1))){
+    # shift and insert the input data to create the lags
+    output[((i*tau)+1+tp):numSamples,((i+1)*inputDim+1):((i+2)*inputDim)] &lt;-
+      data[1:(numSamples-(i*tau)-tp),1:inputDim]
+  }
+  return(output)
+}</code></pre>
+</div>
+<div id="predictions" class="section level3">
+<h3>Predictions</h3>
+<p>Use the “s-map” method in the rEDM package to make predictions on the data.</p>
+<pre class="r"><code># create a function to make predictions
+make_pred &lt;- function(E, matrix, theta, lib, pred){
+  
+  # create empty vectors for observations/predictions output
+  observations_total = {}
+  predictions_total = {}
+  
+  # loop through the embedding matrix and generate predictions using block_lnlp
+  for(target in c(1:5)){
+    # the optimal exclusion radius is 10
+    # tp is 0 because it is already accounted for in the embedding
+    output &lt;- block_lnlp(matrix, target_column=target, columns=c(6:((E+1)*5)),
+                         exclusion_radius=10, stats_only=FALSE, method=&quot;s-map&quot;,
+                         tp=0, theta=theta, lib=lib, pred=pred)
+    
+    outputs &lt;- output$model_output[[1]]
+    predictions &lt;- outputs$pred
+    observations &lt;- outputs$obs
+    
+    # add observations/predictions to the vectors created above
+    observations_total = cbind(observations_total, observations)
+    predictions_total = cbind(predictions_total, predictions)
+  }
+  # combine and return observations and predictions
+  new_list = list(&quot;obs&quot;=observations_total, &quot;pred&quot;=predictions_total)
+  return(new_list)
+}</code></pre>
+</div>
+<div id="edm-predictions-error-whole-worm" class="section level3">
+<h3>EDM Predictions Error (Whole Worm)</h3>
+<p>Calculate RMS error based on the observations and the predictions.</p>
+<pre class="r"><code># create a function to calculate error
+edm_error &lt;- function(pred, observations_total, ew, predictions_total){
+  
+  # define the length of the predictions and an empty array for error
+  range_loop = c(1:(pred[2]-pred[1]+1))
+  errors = array(NA, dim=c(length(range_loop),1))
+  
+  for(t in range_loop){
+    # a linear combination of eigenworms will generate body angles
+    curr = observations_total[t,]
+    pos_obs = array(0, dim=c(100,1))
+    for(i in c(1:5)){
+      # multiply each coefficient by its corresponding eigenworm
+      pos_obs = pos_obs + ew[,i]*as.numeric(curr[i])
+    }
+    
+    curr = predictions_total[t,]
+    pos_pred = array(0, dim=c(100,1))
+    for(i in c(1:5)){
+      # multiply each coefficient by its corresponding eigenworm
+      pos_pred = pos_pred + ew[,i]*as.numeric(curr[i])
+    }
+    
+    # calculate the RMS error
+    errors[t] = (mean((pos_obs - pos_pred)^2))^(1/2)
+  }
+  return(errors)
+}</code></pre>
+</div>
+<div id="edm-predictions-error-worm-segments" class="section level3">
+<h3>EDM Predictions Error (Worm Segments)</h3>
+<p>Calculate RMS error based on the observations and the predictions for each section of the worm.</p>
+<pre class="r"><code># create a function to calculate error
+edm_error_section &lt;- function(pred, observations_total, ew, predictions_total){
+  
+  # define the length of the predictions and an empty array for error
+  range_loop = c(1:(pred[2] - pred[1] + 1))
+  errors = array(NA, dim=c(length(range_loop),5))
+  
+  # break the worm body angles into five equal segments
+  angles = c(1,20,21,40,41,60,61,80,81,100)
+  for(ang in 1:5){
+    for(t in range_loop){
+      # a linear combination of eigenworms will generate body angles
+      curr = observations_total[t,]
+      pos_obs = array(0, dim=c(100,1))
+      for(i in c(1:5)){
+        # multiply each coefficient by its corresponding eigenworm
+        pos_obs = pos_obs + ew[,i]*as.numeric(curr[i])
+      }
+      pos_obs = pos_obs[angles[(ang*2-1)]:angles[(ang*2)]]
+      
+      curr = predictions_total[t,]
+      pos_pred = array(0, dim=c(100,1))
+      for(i in c(1:5)){
+        # multiply each coefficient by its corresponding eigenworm
+        pos_pred = pos_pred + ew[,i]*as.numeric(curr[i])
+      }
+      pos_pred = pos_pred[angles[(ang*2-1)]:angles[(ang*2)]]
+      
+      # calculate the RMS error
+      errors[t,ang] = (mean((pos_obs - pos_pred)^2))^(1/2)
+    }
+  }
+  return(errors)
+}</code></pre>
+</div>
+<div id="constant-predictor-error" class="section level3">
+<h3>Constant Predictor Error</h3>
+<p>Calculate constant predictor error based on one time step earlier.</p>
+<pre class="r"><code># create a function to calculate error
+cp_error &lt;- function(pred, data, ew){
+  
+  # define the length of the predictions and an empty array for error
+  range_loop = c(1:(pred[2] - pred[1]))
+  cp_errors = array(NA, dim=c(length(range_loop),1))
+  
+  for(t in range_loop){
+    # a linear combination of eigenworms will generate body angles
+    curr = data[t + pred[1],]
+    pos_obs = array(0, dim=c(100,1))
+    for(i in c(1:5)){
+      # multiply each coefficient by its corresponding eigenworm
+      pos_obs = pos_obs + ew[,i]*as.numeric(curr[i])
+    }
+    
+    curr = data[t + pred[1] - 1,]
+    pos_pred = array(0, dim=c(100,1))
+    for(i in c(1:5)){
+      # multiply each coefficient by its corresponding eigenworm
+      pos_pred = pos_pred + ew[,i]*as.numeric(curr[i])
+    }
+    
+    # calculate the RMS error
+    cp_errors[t] = (mean((pos_obs - pos_pred)^2))^(1/2)
+  }
+  
+  # find the average value of the constant predictor error time series
+  cp_mean = mean(cp_errors, na.rm=TRUE)
+  
+  return(cp_mean)
+}</code></pre>
+</div>
+<div id="classifying-forwardsbackwardsturns" class="section level3">
+<h3>Classifying Forwards/Backwards/Turns</h3>
+<p>Use thresholds to filter data and classify sections of the time series.</p>
+<pre class="r"><code># create a function to classify data
+data_class &lt;- function(data, pred){
+  
+  # thresholds
+  delta_thresh = 3
+  epsilon_thresh = 0.01
+  turns_thresh = 10
+  
+  # define eigenworms a1, a2, and a3
+  a1_before = data[(pred[1]:(pred[2]-2)),1]
+  a1 = data[((pred[1]+1):(pred[2]-1)),1]
+  a1_after = data[((pred[1]+2):pred[2]),1]
+  a2_before = data[(pred[1]:(pred[2]-2)),2]
+  a2 = data[((pred[1]+1):(pred[2]-1)),2]
+  a2_after = data[((pred[1]+2):pred[2]),2]
+  a3 = data[((pred[1]+1):(pred[2]-1)),3]
+  
+  # estimate phase velocity in the a1,a2 plane
+  ang_change = atan(a2_after/a1_after) - atan(a2_before/a1_before)
+  change = pmin(abs(ang_change), (pi - abs(ang_change)))
+  thresh = which(((a1^2 + a2^2)^(1/2)) &gt; delta_thresh)
+  
+  # if phase velocity is smaller than pi/2
+  place_a = which(abs(ang_change) &lt; (pi - abs(ang_change)))
+  new_a = c()
+  for (i in 1:length(place_a)){
+    # only use these values if they exceed the threshold
+    if (place_a[i] %in% thresh){new_a = append(new_a, place_a[i])}
+  }
+  change[new_a] = change[new_a]*sign(ang_change)[new_a]  # return the same sign
+  
+  # if phase velocity is larger than pi/2
+  place_b = which(abs(ang_change) &gt; (pi - abs(ang_change)))
+  new_b = c()
+  for (i in 1:length(place_b)){
+    # only use these values if they exceed the threshold
+    if (place_b[i] %in% thresh){new_b = append(new_b, place_b[i])}
+  }
+  change[new_b] = change[new_b]*-sign(ang_change)[new_b]  # reverse the sign
+  
+  # find values that do not meet thresholds
+  not_c = c()
+  for (i in 1:length(change)){
+    if (!(i %in% append(new_a, new_b))){not_c = append(not_c, i)}
+  }
+  change[not_c] = NA  # set them to NA
+  
+  # classify forwards, backwards, and turns
+  forward = which(change &lt; -epsilon_thresh)
+  backward = which(change &gt; epsilon_thresh)
+  turns = which(abs(a3) &gt; turns_thresh)
+  
+  change[turns] = NA  # remove phase velocity at turns
+  
+  # combine and return forward, backward, turns, and change
+  new_list = list(&quot;forw&quot;=forward, &quot;back&quot;=backward, &quot;turn&quot;=turns, &quot;chan&quot;=change)
+  return(new_list)
+}</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
