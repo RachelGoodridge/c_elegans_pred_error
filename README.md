@@ -1,0 +1,3 @@
+### Tracking changes in behavioural dynamics using prediction error
+
+This paper was a collaboration between members of the Scripps Institution of Oceanography and members of the Section of Ecology, Behavior, and Evolution, Division of Biological Sciences at UCSD. It was published in bioRxiv on October 21, 2020 and can be found online [here](https://www.biorxiv.org/content/10.1101/2020.10.19.346080v1.full). It was later published in PLoS ONE on May 12, 2021 and can be found online [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251053). The code used in our analysis is available via GitHub [here](https://rachelgoodridge.github.io/c_elegans_pred_error/).
